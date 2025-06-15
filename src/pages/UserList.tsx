@@ -55,6 +55,13 @@ const UserList: React.FC = () => {
         dispatch(fetchUserList());
     }, [dispatch]);
 
+    useEffect(() => {
+        const totalPages = Math.ceil(totalFilteredUsers / pageSize);
+        if (currentPage > totalPages && totalPages > 0) {
+            setCurrentPage(totalPages);
+        }
+    }, [totalFilteredUsers, currentPage, pageSize]);
+
     // Handlers
     const handleCreateClick = () => {
         setModalMode('create');

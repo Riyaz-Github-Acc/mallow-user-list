@@ -4,6 +4,8 @@ import { Avatar, Button, Flex, Table, Typography } from 'antd';
 import type { UserListCompProps, UserListDataProps } from '../../types/user';
 
 const UserListTable = ({ userData, onEdit, onDelete }: UserListCompProps) => {
+    const { Link } = Typography;
+
     const columns = [
         {
             title: '',
@@ -26,15 +28,7 @@ const UserListTable = ({ userData, onEdit, onDelete }: UserListCompProps) => {
             dataIndex: 'email',
             key: 'email',
             width: '20%',
-            render: (email: string) => (
-                <Typography.Link
-                    style={{
-                        whiteSpace: 'nowrap',
-                    }}
-                >
-                    {email}
-                </Typography.Link>
-            ),
+            render: (email: string) => <Link style={{ whiteSpace: 'nowrap' }}>{email}</Link>,
         },
         {
             title: 'First Name',
