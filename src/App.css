@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f0f2f5;
+}
+
+.custom-segmented {
+    width: fit-content !important;
+}
+
+.custom-segmented .ant-segmented-item-selected {
+    border-color: #1677ff !important;
+    color: #1677ff !important;
+}
+
+.custom-segmented .ant-segmented-item-selected svg {
+    color: #1677ff !important;
+}
+
+.ant-table-thead th {
+    white-space: nowrap;
+}
