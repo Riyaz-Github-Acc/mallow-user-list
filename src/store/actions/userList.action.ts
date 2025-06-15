@@ -23,7 +23,7 @@ import getErrorMessage from '../../utils/getErrorMessage';
 export const fetchUserList = () => async (dispatch: Dispatch<UserActionProps>) => {
     dispatch({ type: USER_FETCH_START });
     try {
-        const res = await api.get<UserListResProps>(`/users?per_page=12`);
+        const res = await api.get<UserListResProps>(`/users?per_page=2`);
         dispatch({ type: USER_FETCH_SUCCESS, payload: res?.data?.data });
     } catch (error: unknown) {
         const errorMsg = getErrorMessage(error);
